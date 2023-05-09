@@ -1,14 +1,35 @@
-const animateSpinner = function(delay, times) {
-  const chars = ['|', '/', '-', '\\', '|'];
-  let index = 0;
-  for (let i = 0; i < times; i++) {
+setTimeout(() => {
+  process.stdout.write('\r|   ');
+}, 100);
 
-    setTimeout(() => {
-      process.stdout.write(`\r${chars[index]}   `);
-      index = (index + 1) % chars.length;
-      animateSpinner(delay);
-    }, delay);
-  }
-};
+setTimeout(() => {
+  process.stdout.write('\r/   ');
+}, 300);
 
-animateSpinner(100, 5);
+setTimeout(() => {
+  process.stdout.write('\r-   ');
+}, 500);
+
+setTimeout(() => {
+  process.stdout.write('\r\\   ');
+}, 700);
+
+setTimeout(() => {
+  process.stdout.write('\r|   ');
+}, 900);
+
+setTimeout(() => {
+  process.stdout.write('\r/   ');
+}, 1100);
+
+setTimeout(() => {
+  process.stdout.write('\r-   ');
+}, 1300);
+
+setTimeout(() => {
+  process.stdout.write('\r\\   ');
+}, 1500);
+
+setTimeout(() => {
+  process.stdout.write('\r|   ');
+}, 1700);
